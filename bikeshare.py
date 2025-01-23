@@ -62,11 +62,11 @@ def trip_duration_statistics(df):
 
 def user_statistics(df):
     print("Calculating user statistics...")
-    print(f"User types:\n{df['User Type'].value_counts()}")
+    print(f"사용자 유형형:\n{df['사용자 유형형'].value_counts()}")
     if 'Gender' in df.columns:
         print(f"Gender counts:\n{df['Gender'].value_counts()}")
     if 'Birth Year' in df.columns:
-        print(f"Earliest birth year: {int(df['Birth Year'].min())}")
+        print(f"가장빠른 birth year: {int(df['Birth Year'].min())}")
         print(f"Most recent birth year: {int(df['Birth Year'].max())}")
         print(f"Most common birth year: {int(df['Birth Year'].mode()[0])}")
 
