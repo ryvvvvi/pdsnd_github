@@ -1,17 +1,54 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+# Bikeshare 데이터 분석 프로젝트
 
-### Date created
-Include the date you created this project and README file.
+### 생성일자
+2025년 1월 23일
 
-### Project Title
-Replace the Project Title
+### 프로젝트 제목
+Bikeshare 데이터 분석
 
-### Description
-Describe what your project is about and what it does
+### 설명
+이 프로젝트는 특정 도시에서 자전거 대여 데이터를 분석하는 프로그램입니다. 사용자는 분석하고 싶은 도시, 월, 요일을 선택하여 다양한 통계 정보를 얻을 수 있습니다. 프로그램은 pandas와 numpy 라이브러리를 사용하여 데이터를 처리하고, 자전거 대여에 대한 시간, 역, 여행 시간, 사용자 정보를 분석합니다.
 
-### Files used
-Include the files used
+### 사용된 파일들
+- `chicago.csv`
+- `new_york_city.csv`
+- `washington.csv`
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+### 기능
+1. **도시 선택**: 사용자는 분석할 도시를 선택할 수 있습니다. 선택할 수 있는 도시는 `chicago`, `new york city`, `washington`입니다.
+2. **월 선택**: 사용자는 분석할 월을 선택할 수 있습니다. 'all'을 입력하면 모든 월에 대한 데이터가 분석됩니다.
+3. **요일 선택**: 사용자는 분석할 요일을 선택할 수 있습니다. 'all'을 입력하면 모든 요일에 대한 데이터가 분석됩니다.
+4. **데이터 분석**: 시간 통계, 역 통계, 여행 시간 통계, 사용자 통계를 출력합니다.
+   - **시간 통계**: 가장 흔한 월, 요일, 시간을 계산합니다.
+   - **역 통계**: 가장 흔한 시작 역, 끝 역, 여행 경로를 계산합니다.
+   - **여행 시간 통계**: 총 여행 시간과 평균 여행 시간을 계산합니다.
+   - **사용자 통계**: 사용자 유형, 성별, 출생 연도에 대한 통계를 출력합니다.
+5. **원시 데이터 표시**: 사용자가 원시 데이터를 5개씩 볼 수 있도록 하며, 'no'를 입력하면 종료됩니다.
 
+### 코드 설명
+1. **`get_user_input()`**  
+사용자로부터 도시, 월, 요일을 입력받습니다.
+
+2. **`load_city_data(city, month, day)`**  
+사용자가 선택한 도시, 월, 요일에 맞는 데이터를 불러옵니다. 데이터는 pandas의 데이터프레임 형식으로 로드됩니다.
+
+3. **`time_statistics(df)`**  
+가장 흔한 월, 요일, 시간을 출력합니다.
+
+4. **`station_statistics(df)`**  
+가장 흔한 시작 역, 끝 역, 여행 경로를 출력합니다.
+
+5. **`trip_duration_statistics(df)`**  
+총 여행 시간과 평균 여행 시간을 출력합니다.
+
+6. **`user_statistics(df)`**  
+사용자 유형, 성별, 출생 연도에 대한 통계를 출력합니다.
+
+7. **`display_raw_data(df)`**  
+원시 데이터를 5개씩 출력할 수 있습니다.
+
+8. **`main()`**  
+사용자가 입력한 데이터를 기반으로 분석을 시작하고, 모든 기능을 수행합니다.
+
+### 프로젝트 크레딧
+이 프로젝트는 Udacity의 **"데이터 분석 프로젝트"** 과정에 포함된 과제입니다. 프로젝트의 일부로 사용된 CSV 파일들은 해당 과정의 데이터 세트를 기반으로 하고 있습니다. 프로젝트를 진행하면서 참고한 다양한 블로그와 튜토리얼에 대해 감사의 말을 전합니다.
