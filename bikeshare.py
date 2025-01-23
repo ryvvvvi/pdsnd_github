@@ -47,7 +47,7 @@ def time_statistics(df):
     print(f"Most common month: {df['Month'].mode()[0]}")
     print(f"Most common day: {df['Day'].mode()[0]}")
     df['Hour'] = df['Start Time'].dt.hour
-    print(f"Most common hour: {df['Hour'].mode()[0]}")
+    print(f"Most common 시간: {df['시간'].mode()[0]}")
 
 def station_statistics(df):
     print("Calculating station statistics...")
@@ -61,8 +61,8 @@ def trip_duration_statistics(df):
     print(f"Average travel time: {df['Trip Duration'].mean()} seconds")
 
 def user_statistics(df):
-    print("Calculating user statistics...")
-    print(f"사용자 유형형:\n{df['사용자 유형형'].value_counts()}")
+    print("계산중 user statistics...")
+    print(f"사용자 유형:\n{df['사용자 유형'].value_counts()}")
     if '성' in df.columns:
         print(f"성 counts:\n{df['성'].value_counts()}")
     if 'Birth Year' in df.columns:
