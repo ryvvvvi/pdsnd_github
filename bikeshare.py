@@ -9,6 +9,7 @@ CITY_FILES = {
 }
 
 def get_user_input():
+    """사용자 입력을 받는 부분"""
     city = ""
     available_cities = list(CITY_FILES.keys())
     while city not in available_cities:
@@ -81,6 +82,7 @@ def display_raw_data(df):
             break
 
 def main():
+
     while True:
         city, month, day = get_user_input()
         df = load_city_data(city, month, day)
