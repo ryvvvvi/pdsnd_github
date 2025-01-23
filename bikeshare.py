@@ -57,7 +57,7 @@ def station_statistics(df):
 
 def trip_duration_statistics(df):
     print("Calculating trip duration statistics...")
-    print(f"Total travel time: {df['Trip Duration'].sum()} seconds")
+    print(f"Total 여행 time: {df['Trip Duration'].sum()} seconds")
     print(f"Average travel time: {df['Trip Duration'].mean()} seconds")
 
 def user_statistics(df):
